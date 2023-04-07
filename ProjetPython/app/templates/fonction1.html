@@ -1,0 +1,61 @@
+<html>
+<meta charset="utf-8">
+    <style>
+        .header {
+          padding: 20px;
+          text-align: center;
+          background: #1abc9c;
+          color: white;
+          font-size: 20px;
+        }
+        body {
+          font-family: Arial;
+          margin: 0;
+        }
+        .content {padding:20px;}
+    </style>
+
+        <head>
+        <div class="header">
+          <h1>Projet Python : TD 9&10</h1>
+          <p>Django</p>
+        </div>
+    </head>
+    <body>
+        <div class="content">
+        <h1>Pour admirer nos jolis graphes :</h1>
+          <p>(Retrouvez l'entièreté de nos graphes et interprétations dans le notebook)</p>
+            <form action="test1">
+            <select name="option" id="option-select" onchange='if(this.value!=0){this.form.submit();}'>
+              <option value="0">Sélectionner une option</option>
+              <option value="1">Prix du m^2 par département (histogramme)</option>
+              <option value="2">Prix du m^2 par département (carte)</option>
+              <option value="3">Prix du m^2 par région</option>
+              <option value="4">Nombre de pièces principales par commune</option>
+              <option value="5">Nombre de pièces principales par département</option>
+              <option value="6">Nombre de pièces principales par région</option>
+              <option value="7">Nombre de pièces principales par type d'habitation</option>
+              <option value="8">Prix du m^2 par nombre de pièces principales</option>
+              <option value="9">Surface moyenne du terrain par commune</option>
+              <option value="10">Surface moyenne du terrain par département</option>
+              <!-- <option value="11">Surface moyenne du terrain par région</option> -->              
+              <option value="12">Valeur foncière par commune</option>
+              <option value="13">Valeur foncière par département</option>
+              <option value="14">Valeur foncière par région</option>
+              <option value="15">Proportions des différents types de local</option>
+              <option value="16">Proportions des différents types de voie</option>
+              <option value="17">Proportions des différents types de mutation</option>
+              <option value="18">[Comparaison 2018] Nombre de mutations</option>
+              <option value="19">[Comparaison 2018] Prix m^2 par type de local</option>
+              <option value="20">[Comparaison 2018] Nombre de pièces principales</option>
+              <option value="21">[Comparaison 2018] Types de voie</option>
+              
+            </select>
+            
+            {{plot_html|safe}} 
+        
+        <p>Par Aurore, Claire et Jean-Guillaume</p>
+            
+        </div>
+    </body>
+</html>

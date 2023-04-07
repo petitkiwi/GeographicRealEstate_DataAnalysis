@@ -1,0 +1,41 @@
+<html>
+<meta charset="utf-8">
+    <style>
+        .header {
+          padding: 20px;
+          text-align: center;
+          background: #1abc9c;
+          color: white;
+          font-size: 20px;
+        }
+        body {
+          font-family: Arial;
+          margin: 0;
+        }
+        .content {padding:20px;}
+    </style>
+
+        <head>
+        <div class="header">
+          <h1>Nombre de pièces principales</h1>
+          <p>Choix de la représentation des graphiques</p>
+        </div>
+    </head>
+    <body>
+        <div class="content">
+          <h1>la mère de JG</h1>
+            <form action="test1">
+            <select name="option" id="option-select" onchange='if(this.value!=0){this.form.submit();}'>
+              <option value="0">Veuillez choisir une option</option>
+              <option value="1">Par commune</option>
+              <option value="2">Par département</option>
+              <option value="3">Par région</option>
+              <option value="4">Par type d'habitation</option>
+              
+            </select>
+            
+            {{plot_html|safe}} 
+            
+        </div>
+    </body>
+</html>
